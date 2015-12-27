@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <table>
+            <tr>
+                <td>id</td>
+                <td>titulo</td>
+                <td>descricao</td>
+                <td>preco</td>
+            </tr>
+            <% for ( var i = 0; i < lista.length; i++ ) {%>
+            <tr>
+                <td><%= lista[i].id %></td>
+                <td><%= lista[i].titulo %></td>
+                <td><%= lista[i].descricao %></td>
+                <td><%= lista[i].preco %></td>
+            </tr>
+            <% } %>
+        </table>
+        <a href="/"><input type="button" value="Voltar"></a>
+    </body>
+</html>

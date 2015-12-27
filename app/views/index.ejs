@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRUD Livros</title>
+    <link rel="stylesheet" href="/css/livro.css" />
+  </head>
+  <body>
+    <h1>CRUD Livros</h1>
+    <ul>
+      <li> <a href="/produtos"> Lista de livros </a> </li>
+      <li> <a href="/produtos/form"> Cadastrar Livro </a> </li>
+      <li> <a href="/promocoes/form"> Cadastrar Promocao </a> </li>
+    </ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+      var socket = io();
+      socket.on('novaPromocao', function (data) {
+          alert("Em promocao " + data.mensagem);
+      });
+  </script>
+  </body>
+</html>
